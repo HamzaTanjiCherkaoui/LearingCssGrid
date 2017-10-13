@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css Grid PlayGround</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div>Lorem ipsum dolor sit.</div>
+		<div>Lorem ipsum dolor sit.</div>
+		<div>Lorem ipsum dolor sit.</div>
+		<div>Lorem ipsum dolor sit.</div>
+
+	</div>
+</body>
+<style type="text/css">
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 70% 30%;
+	grid-gap: 1em;
+}
+.wrapper > div {
+	background-color: #eee;
+	padding: 1em;
+}
+.wrapper > div:nth-child(odd) {
+	background-color: #ddd;
+}
+</style>
+</html>
