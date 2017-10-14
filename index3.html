@@ -6,37 +6,23 @@
 </head>
 <body>
 	<div class="wrapper">
-		<div>Lorem ipsum dolor sit.</div>
-		<div>Lorem ipsum dolor sit.</div>
-		<div>Lorem ipsum dolor sit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est voluptatem dolorem dolor distinctio temporibus cupiditate eaque vero, illo molestiae vel doloremque dolorum repellat ullam possimus modi, dicta eum debitis ratione in sunt et corrupti. Laborum tempora ipsam aut cupiditate cum! </div>
-		<div class="nested">
-			<div>lorem </div>
-			<div>lorem </div>
-			<div>lorem </div>
-			<div>lorem </div>
-			<div>lorem </div>
-			<div>lorem </div>
-			<div>lorem </div>
-			<div>lorem </div>
-			<div>lorem </div>
-			<div>lorem </div>
-			<div>lorem </div>
-			<div>lorem </div>
-			
-		</div>
-		<div>Lorem ipsum dolor sit.</div>
-		<div>Lorem ipsum dolor sit.</div>
-		<div>Lorem ipsum dolor sit.</div>
+		<div class="box box1"> Box 1</div>
+		<div class="box box2"> Box 2</div>
+		<div class="box box3"> Box 3</div>
+		<div class="box box4"> Box 4</div>
 	</div>
 </body>
 <style type="text/css">
 
 .wrapper {
 	display: grid;
-	grid-template-columns: repeat(3 , 1fr);
+	grid-template-columns: 1fr 2fr 1fr ;	
+	grid-auto-rows: minmax(100px , auto);
 	grid-gap: 1em;
-	grid-auto-rows: minmax(100px,auto);
+	/*justify-items:center;*/
+	
 }
+
 .wrapper > div {
 	background-color: #eee;
 	padding: 1em;
@@ -44,16 +30,18 @@
 .wrapper > div:nth-child(odd) {
 	background-color: #ddd;
 }
-.nested {
-	display: grid ;
-	grid-template-columns: repeat(3 , 1fr);
-	grid-auto-rows: 100px;
-	grid-gap: 1em;
+
+.box1 {
+	align-self: center;
+}
+.box2 {
 
 }
-.nested > div {
-	border: #333 1px solid;
-	padding: 1em;
+.box3 {
+
+}
+.box4 {
+
 }
 </style>
 </html>
